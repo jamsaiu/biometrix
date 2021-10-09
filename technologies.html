@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Biometrix</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <title>BiometriX</title>
+    <link rel='stylesheet' href='techheader.css'>
+    <link rel='stylesheet' href='footer.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <input type="checkbox" id="active">
-    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
-    <div class="wrapper">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Feedback</a></li>
-    </ul>
-    </div>
-        <div class="content">
-            <div class="title">
-        Fullscreen Overlay Navigation Bar</div>
-        <p>
-        with HTML & CSS Neon Effect</p>
-    </div>
     <header>
-        <div class="Header">
-            <img id='fingerprint' src='resources/fingerprint.png'>
-            <h1 id='phonetext'><u>Access Granted</u></h1>
-            <div class="Header-background"></div>
-            <div class="Header-content">
-                <div class="Header-hero">
-                    <h1>BiometriX </h1>
-                    <p>Reinventing <strong>Privacy</strong> <br>And Innovating <strong>Security</strong> <br>Since <strong>2021</strong></p><button class="Button">Register Now</button>
-                </div>
-                <div class="Header-visuals">
-                    <div class="Iphone"></div>
-                </div>
-            </div>
+        <div class="small" id="header-scroll">
+            <h1 class='move' style='font-size:30px;'><a href="#"></a><strong>BiometriX</strong></a></h1><br>
+            <h1 class='move' >Back Home</h1>
+            <nav>
+                <ul>
+                    <li><a href="#1">First</a></li>
+                    <li><a href="#2">Second</a></li>
+                    <li><a href="#3">Third</a></li>
+                    <li><a href="#4">Fourth</a></li>
+                    <li><a href="#5">Fifth</a></li>
+                </ul>
+            </nav>
         </div>
-    </header><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      
-      <main>
-        <!-- Content -->
-      </main>
-      
-      <footer class="footer">
+    </header>
+    <section id="1">
+        <h1>First</h1>
+    </section>
+    <section id="2">
+        <h1>Second</h1>
+    </section>
+    <section id="3">
+        <h1>Third</h1>
+    </section>
+    <section id="4">
+        <h1>Fourth </h1>
+    </section>
+    <section id="5">
+        <h1>Fifth</h1>
+    </section>
+    <footer class="footer">
         <div class="footer__addr">
           <h1 class="footer__logo">Biometrix</h1>
               
@@ -60,7 +48,7 @@
           <address>
             5534 Somewhere In. The World 22193-10212<br>
                 
-            <a class="footer__btn" href="mailto:example@gmail.com">Please Don't Email Us</a>
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
           </address>
         </div>
         
@@ -136,10 +124,45 @@
           <p>&copy; 2021 SubX. All rights reserved.</p>
           
           <div class="legal__links">
-            <span>Made with <span class="heart">♥</span>
+            <span>Made with <span class="heart">♥
           </div>
         </div>
       </footer>
-    
+    <script>
+        
+        //in case js in turned off
+        $(window).on('load', function () {
+                $("#header-scroll").removeClass("small")
+        });
+
+        $(window).scroll(function () {
+            var sc = $(window).scrollTop()
+            if (sc > 1) {
+                $("#header-scroll").addClass("small")
+            } else {
+                $("#header-scroll").removeClass("small")
+            }
+        });
+
+        //scrollspy
+        $(window).on('scroll', function () {
+        var sections = $('section')
+            , nav = $('nav')
+            , nav_height = nav.outerHeight()
+            , cur_pos = $(this).scrollTop();
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
+        
+            if (cur_pos >= top && cur_pos <= bottom) {
+            nav.find('a').removeClass('active');
+            sections.removeClass('active');
+        
+            $(this).addClass('active');
+            nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+            }
+        });
+        });
+    </script>
 </body>
 </html>
