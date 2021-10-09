@@ -11,24 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 </head>
 <body>
+    <a id="button"></a>
+    <script>
+        var btn = $('#button');
+        $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
     <input type="checkbox" id="active">
     <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
     <div class="wrapper">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a style="color: grey;" href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Technologies</a></li>
         <li><a href="#">Gallery</a></li>
-        <li><a href="#">Feedback</a></li>
+        <li><a style="color: midnightblue;" href="#">Super Secret Promo Codes</a></li>
     </ul>
-    </div>
-        <div class="content">
-            <div class="title">
-        Fullscreen Overlay Navigation Bar</div>
-        <p>
-        with HTML & CSS Neon Effect</p>
     </div>
     <header>
         <div class="Header">
@@ -45,7 +58,7 @@
                 </div>
             </div>
         </div>
-    </header><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </header><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       
       <main>
         <!-- Content -->
