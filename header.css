@@ -164,7 +164,8 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: black;
+    /*background: linear-gradient(-135deg, blue, cornflowerblue);*/
     /*background: linear-gradient(375deg, #1cc7d0, #2ede98); 
     background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
     clip-path: circle(25px at calc(0% + 45px) 45px); 
@@ -190,7 +191,7 @@ body {
     font-size: 20px;
     color: #fff;
     cursor: pointer;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, darkblue, #4158d0);
     /*background: linear-gradient(375deg, #1cc7d0, #2ede98); 
     background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
     background: #000;
