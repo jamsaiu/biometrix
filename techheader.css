@@ -33,6 +33,7 @@ a.active {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  z-index: 100;
 }
 #header-scroll h1 {
   padding: 200px 0;
@@ -119,12 +120,11 @@ section:nth-child(odd) {
 .techpic {
   height: 400px;
   position: relative;
-  right: 500px;
-  top: 50px;
+  top: 100px;
 }
 
 .techdescription {
   position: relative;
-  bottom: 350px;
+  top: 200px;
   font-size: 30px;
 }
