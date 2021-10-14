@@ -412,3 +412,11 @@ body {
     color: #96a2a7;
   }
   
+  .boxpic {
+    height: 600px;
+    position: relative;
+    top: 250px;
+    left: 100px;
+    border-style: solid;
+    border-radius: 10px;
+  }
