@@ -115,3 +115,7 @@ section:nth-child(odd) {
     position: relative;
     left: 20px;
 }
+
+.techpic {
+  height: 400px;
+}
