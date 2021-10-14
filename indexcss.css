@@ -33,3 +33,10 @@
     bottom: 500px;
     position: relative;
 }
+
+.originpic {
+    height: 600px;
+    position: relative;
+    left: 70px;
+    bottom: 300px;
+}
