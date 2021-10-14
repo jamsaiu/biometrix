@@ -121,6 +121,8 @@ section:nth-child(odd) {
   height: 400px;
   position: relative;
   top: 100px;
+  border-style: solid;
+  border-radius: 10px;
 }
 
 .techdescription {
